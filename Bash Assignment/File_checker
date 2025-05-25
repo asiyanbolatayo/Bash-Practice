@@ -2,6 +2,8 @@
 
 # Read the path of the file from keyboard input
 read -p "Enter the absolute path of a file to check if it exist: " file_path
+
+# Conditional statement to check if the file exist
 if [[ -f "$file_path" ]]; then
   echo "File exist in the provided path."
 else
