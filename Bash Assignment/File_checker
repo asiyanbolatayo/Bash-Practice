@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Read the path of the file from keyboard input
+read -p "Enter the absolute path of a file to check if it exist: " file_path
+if [[ -f "$file_path" ]]; then
+  echo "File exist in the provided path."
+else
+  echo "Error: '$file_path' is not a valid file path or file does not exist."
+fi
+
+echo "---"

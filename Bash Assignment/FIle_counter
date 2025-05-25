@@ -1,0 +1,16 @@
+#!/bin/bash
+
+read -p "Enter the absolute path of a folder to check how many files exist there: " folder_path
+
+# Validate if the provided path is a directory
+
+if [[ ! -d "$folder_path" ]]; then
+  echo "Error: '$folder_path' is not a valid directory or does not exist."
+  exit 1
+fi
+
+# Count only regular files in the specified directory
+
+files=$(ls "$folder_path"/ | wc -l || echo 0)
+
+echo "The directory '$folder_path' has $files regular files."
